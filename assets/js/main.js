@@ -258,4 +258,49 @@
    */
   new PureCounter();
 
+  /**
+   * WhatsApp contact form
+   */
+  const whatsappForm = select('#whatsappForm');
+  if (whatsappForm) {
+    on('submit', '#whatsappForm', function(e) {
+      e.preventDefault();
+
+      try {
+        const name = select('#name').value.trim();
+        const email = select('#email').value.trim();
+        const subject = select('#subject').value.trim();
+        const message = select('#message').value.trim();
+
+        if (!name || !email || !message) {
+          window.alert('Please fill all required fields.');
+          return;
+        }
+
+        const whatsappNumber = '94711451023';
+        const formattedMessage = [
+          '*New Contact Request*',
+          '',
+          `Date: ${new Date().toLocaleString()}`,
+          `Name: ${name}`,
+          `Email: ${email}`,
+          `Subject: ${subject}`,
+          '',
+          'Message:',
+          message
+        ].join('\n');
+
+        const encodedMessage = encodeURIComponent(formattedMessage);
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+        window.open(whatsappUrl, isMobile ? '_self' : '_blank');
+        this.reset();
+      } catch (error) {
+        console.error('WhatsApp submission error:', error);
+        window.alert('Error preparing your message. Please try again or contact me directly via WhatsApp.');
+      }
+    });
+  }
+
 })()
