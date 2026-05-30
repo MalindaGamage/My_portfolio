@@ -1258,3 +1258,292 @@ section {
     padding-right: 20px 15px;
   }
 }
+
+/*--------------------------------------------------------------
+# About - GitHub Stats
+--------------------------------------------------------------*/
+.about .github-stats-wrap {
+  margin-top: 16px;
+}
+
+.about .github-stats-img {
+  max-width: 100%;
+  border-radius: 10px;
+  border: 1px solid #e4edf9;
+}
+
+/*--------------------------------------------------------------
+# Blog Section
+--------------------------------------------------------------*/
+.blog .blog-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(17, 37, 68, 0.09);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  height: calc(100% - 30px);
+  display: flex;
+  flex-direction: column;
+}
+
+.blog .blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(17, 37, 68, 0.16);
+}
+
+.blog .blog-header {
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.blog .blog-icon {
+  font-size: 54px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* Blog header gradient backgrounds */
+.java-bg     { background: linear-gradient(135deg, #f89820, #d4620a); }
+.aws-bg      { background: linear-gradient(135deg, #FF9900, #c97700); }
+.spring-bg   { background: linear-gradient(135deg, #6DB33F, #3d8b27); }
+.testing-bg  { background: linear-gradient(135deg, #e74c3c, #b03a2e); }
+.ml-bg       { background: linear-gradient(135deg, #9b59b6, #6c3483); }
+.reactive-bg { background: linear-gradient(135deg, #149ddd, #0e7bb5); }
+
+.blog .blog-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.blog .blog-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  letter-spacing: 0.06em;
+}
+
+/* Blog tag colors */
+.java-tag     { background: rgba(248, 152, 32, 0.12); color: #b34f00; }
+.aws-tag      { background: rgba(255, 153, 0,  0.12); color: #a06200; }
+.spring-tag   { background: rgba(109, 179, 63, 0.12); color: #2e6e1a; }
+.testing-tag  { background: rgba(231, 76, 60,  0.12); color: #922b21; }
+.ml-tag       { background: rgba(155, 89, 182, 0.12); color: #5b2c6f; }
+.reactive-tag { background: rgba(20, 157, 221, 0.12); color: #0a6fa1; }
+
+.blog .blog-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #050d18;
+  margin-bottom: 8px;
+  line-height: 1.45;
+}
+
+.blog .blog-meta {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.blog .blog-meta i {
+  margin-right: 4px;
+}
+
+.blog .blog-excerpt {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.65;
+  margin-bottom: 16px;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blog .blog-read-more {
+  font-size: 13px;
+  font-weight: 600;
+  color: #149ddd;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.blog .blog-read-more:hover {
+  gap: 8px;
+  color: #0a6fa1;
+}
+
+.blog .blog-view-all {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 36px;
+  border-radius: 999px;
+  background: #149ddd;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  margin-top: 20px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.blog .blog-view-all i {
+  font-size: 20px;
+}
+
+.blog .blog-view-all:hover {
+  background: #0a6fa1;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/*--------------------------------------------------------------
+# Certifications Section
+--------------------------------------------------------------*/
+.certifications .cert-platform-label {
+  font-size: 18px;
+  font-weight: 700;
+  color: #173b6c;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.certifications .cert-platform-label i {
+  color: #149ddd;
+  font-size: 20px;
+}
+
+.certifications .cert-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 22px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(17, 37, 68, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.certifications .cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(17, 37, 68, 0.14);
+}
+
+.certifications .cert-card-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 24px;
+  color: #fff;
+}
+
+.certifications .cert-card-content h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #050d18;
+  margin-bottom: 4px;
+}
+
+.certifications .cert-card-content p {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.certifications .cert-verified {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #2EC866;
+}
+
+.certifications .cert-view-profile {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 26px;
+  border-radius: 999px;
+  border: 2px solid #149ddd;
+  color: #149ddd;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.certifications .cert-view-profile:hover {
+  background: #149ddd;
+  color: #fff;
+}
+
+/* Cert icon gradient colors */
+.java-cert    { background: linear-gradient(135deg, #f89820, #d4620a); }
+.sql-cert     { background: linear-gradient(135deg, #00adb5, #007a82); }
+.problem-cert { background: linear-gradient(135deg, #149ddd, #0a6fa1); }
+.se-cert      { background: linear-gradient(135deg, #2EC866, #1a7a43); }
+.sei-cert     { background: linear-gradient(135deg, #9b59b6, #6c3483); }
+.cpp-cert     { background: linear-gradient(135deg, #3498db, #1a5276); }
+.python-cert  { background: linear-gradient(135deg, #f39c12, #c07a00); }
+
+/* Badges row */
+.certifications .badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  justify-content: flex-start;
+  padding: 10px 0;
+}
+
+.certifications .badge-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 80px;
+}
+
+.certifications .badge-item .badge-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certifications .badge-item .badge-icon:hover {
+  transform: scale(1.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.certifications .badge-item span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #173b6c;
+  text-align: center;
+}
