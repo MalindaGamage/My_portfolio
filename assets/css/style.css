@@ -228,13 +228,17 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/abc-bg.jpg") top center;
+  background: url("../img/abc-bg.jpg") center 20%;
   background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 #hero:before {
   content: "";
-  background: rgba(5, 13, 24, 0.3);
+  background: rgba(5, 13, 24, 0.45);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -246,7 +250,10 @@ h6 {
 #hero .hero-container {
   position: relative;
   z-index: 2;
-  min-width: 300px;
+  min-width: 0;
+  max-width: 720px;
+  width: 100%;
+  padding: 0 40px;
 }
 
 #hero .hero-eyebrow {
@@ -332,11 +339,7 @@ h6 {
   color: #fff;
 }
 
-@media (min-width: 1024px) {
-  #hero {
-    background-attachment: fixed;
-  }
-}
+/* background-attachment: fixed handled in mobile block above */
 
 @media (max-width: 768px) {
   #hero h1 {
@@ -2634,59 +2637,102 @@ section {
 .unix-tag   { background: rgba(27, 94, 32, 0.10);   color: #1B5E20; }
 
 /* ── Hero ── */
+@media (min-width: 1024px) {
+  #hero { background-attachment: fixed; }
+}
+
+@media (max-width: 1199px) {
+  /* When sidebar hides, hero needs to account for no left margin */
+  #hero .hero-container { padding: 0 30px; }
+}
+
 @media (max-width: 768px) {
   #hero {
     background-attachment: scroll;
-    padding: 0 20px;
+    background-position: center 15%; /* keep face in frame */
+    justify-content: center;
+    min-height: 100vh;
+    padding: 80px 0 40px; /* top padding for hamburger */
+  }
+
+  /* Stronger overlay on mobile for text readability */
+  #hero:before {
+    background: rgba(5, 13, 24, 0.62);
   }
 
   #hero .hero-container {
-    min-width: unset;
-    width: 100%;
     text-align: center;
+    padding: 0 20px;
+    max-width: 100%;
   }
 
   #hero .hero-eyebrow {
     font-size: 10px;
     padding: 6px 10px;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.03em;
     white-space: normal;
-    text-align: center;
-    display: block;
+    display: inline-block;
+    max-width: 100%;
+    line-height: 1.5;
   }
 
   #hero h1 {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 38px;
+    line-height: 46px;
   }
 
   #hero .hero-qualifications {
     font-size: 13px;
-    line-height: 1.5;
+    line-height: 1.6;
+    max-width: 100%;
   }
 
   #hero p {
     font-size: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
   }
 
   .hero-actions {
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   .btn-hero {
-    min-width: 130px;
-    padding: 10px 16px;
+    min-width: 120px;
+    padding: 10px 18px;
     font-size: 13px;
   }
 
-  .hero-particles span { display: none; } /* reduce particles on mobile */
+  .hero-particles span { display: none; }
 }
 
-@media (max-width: 480px) {
-  #hero h1 { font-size: 28px; line-height: 36px; }
-  .hero-actions { flex-direction: column; align-items: center; }
-  .btn-hero { width: 100%; max-width: 280px; }
+@media (max-width: 576px) {
+  #hero {
+    background-position: 65% 15%; /* bias right to keep person visible */
+  }
+
+  #hero h1 { font-size: 32px; line-height: 40px; }
+
+  #hero .hero-qualifications {
+    font-size: 12px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-hero {
+    width: 100%;
+    max-width: 260px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  #hero h1 { font-size: 27px; line-height: 34px; }
+  #hero .hero-eyebrow { font-size: 9px; }
 }
 
 /* ── About ── */
