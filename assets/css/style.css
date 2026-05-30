@@ -2572,6 +2572,67 @@ section {
   Breakpoints: 1199 (sidebar), 991 (tablet), 768 (mobile), 576 (xs)
 ==============================================================*/
 
+/*--------------------------------------------------------------
+# Blog — Blogger platform additions
+--------------------------------------------------------------*/
+/* Platform section labels */
+.blog-platform-label {
+  font-size: 18px;
+  font-weight: 700;
+  color: #173b6c;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-left: 4px solid #149ddd;
+  padding-left: 12px;
+}
+
+.blog-platform-label i {
+  color: #149ddd;
+  font-size: 22px;
+}
+
+.blog-platform-blogger {
+  border-left-color: #FF5722;
+}
+
+.blog-platform-blogger i {
+  color: #FF5722;
+}
+
+/* Blogger "Read on Blogger" link colour */
+.blogger-read-more {
+  color: #FF5722;
+}
+
+.blogger-read-more:hover {
+  color: #d84315;
+}
+
+/* Blogger CTA button */
+.blog-view-all-blogger {
+  background: #FF5722;
+}
+
+.blog-view-all-blogger:hover {
+  background: #d84315;
+}
+
+/* New gradient headers for Blogger topics */
+.hadoop-bg     { background: linear-gradient(135deg, #1a237e 0%, #283593 100%); }
+.cloud-comp-bg { background: linear-gradient(135deg, #0277BD 0%, #01579B 100%); }
+.graph-bg      { background: linear-gradient(135deg, #006064 0%, #00838F 100%); }
+.shell-bg      { background: linear-gradient(135deg, #212121 0%, #424242 100%); }
+.unix-bg       { background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 100%); }
+
+/* Tag colour pills for Blogger topics */
+.hadoop-tag { background: rgba(26, 35, 126, 0.10); color: #1a237e; }
+.cloud-tag  { background: rgba(2, 119, 189, 0.10);  color: #0277BD; }
+.graph-tag  { background: rgba(0, 96, 100, 0.10);   color: #006064; }
+.shell-tag  { background: rgba(66, 66, 66, 0.10);   color: #424242; }
+.unix-tag   { background: rgba(27, 94, 32, 0.10);   color: #1B5E20; }
+
 /* ── Hero ── */
 @media (max-width: 768px) {
   #hero {
