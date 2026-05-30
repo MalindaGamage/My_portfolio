@@ -2538,3 +2538,31 @@ section {
 .edu-transcript.mt-2 {
   margin-top: 8px;
 }
+
+/*--------------------------------------------------------------
+# Company Logo Images (replace text co-badge for employers)
+--------------------------------------------------------------*/
+.co-logo-img {
+  height: 44px;
+  width: auto;
+  max-width: 100px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #fff;
+  padding: 4px 6px;
+  border: 1px solid #e4edf9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: block;
+}
+
+.co-logo-img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
+}
+
+/* Wide logos (e.g. Axiata wordmark) */
+.co-logo-wide {
+  max-width: 140px;
+  height: 40px;
+}
