@@ -2491,3 +2491,50 @@ section {
   width: 90px;
   height: 90px;
 }
+
+/*--------------------------------------------------------------
+# Education Logo Images (replace text badges for universities/schools)
+--------------------------------------------------------------*/
+.edu-logo-img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #fff;
+  padding: 3px;
+  border: 1px solid #e4edf9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: block;
+}
+
+.edu-logo-img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
+}
+
+/* School logo — slightly rounded square */
+.edu-logo-school {
+  border-radius: 50%;
+  padding: 4px;
+  background: #fff;
+}
+
+/* Accommodate wide university wordmark logos (Westminster) */
+.edu-logo-img[alt="University of Westminster"] {
+  width: 88px;
+  height: 44px;
+  border-radius: 6px;
+}
+
+/* Activities line in education */
+.edu-activities {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+/* mt-2 on nested details */
+.edu-transcript.mt-2 {
+  margin-top: 8px;
+}
