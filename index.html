@@ -86,14 +86,29 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-particles" aria-hidden="true">
+      <span style="--size:6px;--left:8%;--dur:14s;--delay:0s"></span>
+      <span style="--size:4px;--left:17%;--dur:10s;--delay:2s"></span>
+      <span style="--size:9px;--left:30%;--dur:16s;--delay:1s"></span>
+      <span style="--size:5px;--left:44%;--dur:11s;--delay:4s"></span>
+      <span style="--size:3px;--left:57%;--dur:9s;--delay:1.5s"></span>
+      <span style="--size:7px;--left:67%;--dur:13s;--delay:3s"></span>
+      <span style="--size:5px;--left:77%;--dur:12s;--delay:0.5s"></span>
+      <span style="--size:8px;--left:88%;--dur:15s;--delay:2.5s"></span>
+      <span style="--size:4px;--left:23%;--dur:10s;--delay:5s"></span>
+      <span style="--size:6px;--left:52%;--dur:14s;--delay:3.5s"></span>
+      <span style="--size:3px;--left:72%;--dur:8s;--delay:6s"></span>
+      <span style="--size:7px;--left:93%;--dur:17s;--delay:1s"></span>
+    </div>
     <div class="hero-container" data-aos="fade-in">
       <span class="hero-eyebrow">Software Backend Engineer @ X-Venture</span>
       <h1>Malinda Gamage</h1>
       <div class="hero-qualifications">MSc in Information Technology (UG) | BSc Eng. (Hons) in Manufacturing &amp; Industrial Engineering</div>
-      <p>I'm <span class="typed" data-typed-items="Backend Engineer, C++ Developer, Java Specialist, Problem Solver, AI/ML Enthusiast"></span></p>
+      <p>I'm <span class="typed" data-typed-items="Backend Engineer, C++ Developer, Java Specialist, Problem Solver, Reactive Programmer, AI/ML Enthusiast"></span></p>
       <div class="hero-actions">
         <a href="#portfolio" class="btn-hero btn-hero-primary scrollto">View Projects</a>
         <a href="#contact" class="btn-hero btn-hero-secondary scrollto">Contact Me</a>
+        <a href="https://github.com/MalindaGamage" class="btn-hero btn-hero-outline" target="_blank" rel="noopener"><i class="bx bxl-github"></i> GitHub</a>
       </div>
     </div>
   </section><!-- End Hero -->
@@ -508,148 +523,260 @@
 
         <div class="section-title">
           <h2>Portfolio</h2>
-          <p>Selected experience across reactive Java platforms, enterprise API systems, ERP customization, embedded software, and practical AI prototyping.</p>
+          <p>Professional work and personal projects spanning reactive backend systems, AI platforms, full-stack applications, and machine learning — with direct source code links on GitHub.</p>
         </div>
 
         <div class="row" data-aos="fade-up">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-java">Java</li>
-              <li data-filter=".filter-python">Python</li>
-              <li data-filter=".filter-cpp">C++</li>
+              <li data-filter=".filter-java">Java / Spring</li>
+              <li data-filter=".filter-python">Python / ML</li>
+              <li data-filter=".filter-fullstack">Full-Stack</li>
+              <li data-filter=".filter-csharp">C# / .NET</li>
+              <li data-filter=".filter-ai">AI</li>
             </ul>
           </div>
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-java">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="API platform and backend engineering project">
-              <div class="portfolio-info-card">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-fullstack filter-ai">
+            <div class="proj-card">
+              <div class="proj-header ts-bg">
+                <i class="bx bx-brain proj-icon"></i>
+                <span class="proj-type-badge">Featured</span>
+              </div>
+              <div class="proj-body">
+                <h4>Context-Aware Next Best Action Platform</h4>
+                <p>AI-powered pharmaceutical field-force platform with PostGIS spatial queries, explainable AI recommendations, offline PWA, and role-based workflows for medical reps.</p>
+                <div class="proj-tags">
+                  <span class="proj-tag">TypeScript</span><span class="proj-tag">Java 21</span><span class="proj-tag">FastAPI</span><span class="proj-tag">PostgreSQL</span><span class="proj-tag">React</span><span class="proj-tag">Docker</span>
+                </div>
+                <div class="proj-links">
+                  <a href="https://github.com/MalindaGamage/context_aware_nb_system" class="proj-link proj-link-github" target="_blank" rel="noopener"><i class="bx bxl-github"></i> GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-java filter-fullstack">
+            <div class="proj-card">
+              <div class="proj-header java-spring-bg">
+                <i class="bx bx-building proj-icon"></i>
+                <span class="proj-type-badge">Full-Stack</span>
+              </div>
+              <div class="proj-body">
+                <h4>Hotel Management System</h4>
+                <p>Production-grade hotel platform with RS256 JWT auth, optimistic locking for concurrent bookings, idempotent payment processing, and PDF/Excel reporting.</p>
+                <div class="proj-tags">
+                  <span class="proj-tag">Java 21</span><span class="proj-tag">Spring Boot 3.3</span><span class="proj-tag">React 18</span><span class="proj-tag">MySQL</span><span class="proj-tag">JWT</span><span class="proj-tag">Tailwind</span>
+                </div>
+                <div class="proj-links">
+                  <a href="https://github.com/MalindaGamage/hotel-management-system" class="proj-link proj-link-github" target="_blank" rel="noopener"><i class="bx bxl-github"></i> GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-java filter-ai">
+            <div class="proj-card">
+              <div class="proj-header reactive-bg">
+                <i class="bx bx-server proj-icon"></i>
+                <span class="proj-type-badge">Professional</span>
+              </div>
+              <div class="proj-body">
                 <h4>Reactive Risk Management System</h4>
-                <p>Spring Boot, Flux/Mono, NATS, AWS</p>
+                <p>Enterprise risk platform at X-Venture using Spring WebFlux Flux/Mono for async processing, NATS event streaming, and AWS cloud-native deployment.</p>
+                <div class="proj-tags">
+                  <span class="proj-tag">Spring Boot</span><span class="proj-tag">Flux/Mono</span><span class="proj-tag">NATS</span><span class="proj-tag">AWS</span><span class="proj-tag">PostgreSQL</span><span class="proj-tag">Docker</span>
+                </div>
+                <div class="proj-links">
+                  <span class="proj-link proj-link-work"><i class="bi bi-building"></i> X-Venture</span>
+                </div>
               </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Reactive Risk Management System"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-java">
+            <div class="proj-card">
+              <div class="proj-header java-spring-bg">
+                <i class="bx bx-broadcast proj-icon"></i>
+                <span class="proj-type-badge">Java</span>
+              </div>
+              <div class="proj-body">
+                <h4>Reactive Web Server – SSE Streaming</h4>
+                <p>Non-blocking web server streaming live stock prices to thousands of concurrent clients via Server-Sent Events using Project Reactor and Netty.</p>
+                <div class="proj-tags">
+                  <span class="proj-tag">Java 21</span><span class="proj-tag">Spring WebFlux</span><span class="proj-tag">Project Reactor</span><span class="proj-tag">Netty</span><span class="proj-tag">SSE</span>
+                </div>
+                <div class="proj-links">
+                  <a href="https://github.com/MalindaGamage/reactive-web-server" class="proj-link proj-link-github" target="_blank" rel="noopener"><i class="bx bxl-github"></i> GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-java">
+            <div class="proj-card">
+              <div class="proj-header wso2-bg">
+                <i class="bx bx-shield-quarter proj-icon"></i>
+                <span class="proj-type-badge">Professional</span>
+              </div>
+              <div class="proj-body">
+                <h4>API Platform &amp; Identity Controls</h4>
+                <p>WSO2 API Manager and Identity Server engineering — scopes, throttling, OAuth2 configs, claim mappings, and gateway service bug fixes at Axiata Digital Labs.</p>
+                <div class="proj-tags">
+                  <span class="proj-tag">WSO2 APIM</span><span class="proj-tag">WSO2 IS</span><span class="proj-tag">OAuth2</span><span class="proj-tag">Java</span><span class="proj-tag">C++</span>
+                </div>
+                <div class="proj-links">
+                  <span class="proj-link proj-link-work"><i class="bi bi-building"></i> Axiata Digital Labs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-ai filter-python">
+            <div class="proj-card">
+              <div class="proj-header ai-bg">
+                <i class="bx bx-trending-up proj-icon"></i>
+                <span class="proj-type-badge">AI</span>
+              </div>
+              <div class="proj-body">
+                <h4>AI Retirement Planner</h4>
+                <p>Full-stack web application combining AI-powered financial recommendations with interactive retirement planning tools and secure user authentication.</p>
+                <div class="proj-tags">
+                  <span class="proj-tag">Python</span><span class="proj-tag">AI / LLM</span><span class="proj-tag">JavaScript</span><span class="proj-tag">FastAPI</span>
+                </div>
+                <div class="proj-links">
+                  <a href="https://github.com/MalindaGamage/ai_retirement_planner" class="proj-link proj-link-github" target="_blank" rel="noopener"><i class="bx bxl-github"></i> GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-fullstack filter-python">
+            <div class="proj-card">
+              <div class="proj-header fullstack-bg">
+                <i class="bx bx-store proj-icon"></i>
+                <span class="proj-type-badge">Full-Stack</span>
+              </div>
+              <div class="proj-body">
+                <h4>Tea Products Management App</h4>
+                <p>Full-stack web app for tea product catalog management with CRUD operations, search filtering, pagination, and a responsive Next.js/React frontend.</p>
+                <div class="proj-tags">
+                  <span class="proj-tag">FastAPI</span><span class="proj-tag">Next.js</span><span class="proj-tag">React</span><span class="proj-tag">SQLAlchemy</span><span class="proj-tag">Bootstrap</span>
+                </div>
+                <div class="proj-links">
+                  <a href="https://github.com/MalindaGamage/Tea-Products-FastAPI-NEXT.js" class="proj-link proj-link-github" target="_blank" rel="noopener"><i class="bx bxl-github"></i> GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-python filter-ai">
+            <div class="proj-card">
+              <div class="proj-header ml-sci-bg">
+                <i class="bx bx-message-alt-detail proj-icon"></i>
+                <span class="proj-type-badge">ML / NLP</span>
+              </div>
+              <div class="proj-body">
+                <h4>Sentiment Analysis – NLP</h4>
+                <p>End-to-end NLP pipeline with TF-IDF vectorization and Logistic Regression on the Sentiment140 dataset, achieving ~77.3% classification accuracy.</p>
+                <div class="proj-tags">
+                  <span class="proj-tag">Python</span><span class="proj-tag">scikit-learn</span><span class="proj-tag">NLTK</span><span class="proj-tag">TF-IDF</span><span class="proj-tag">pandas</span>
+                </div>
+                <div class="proj-links">
+                  <a href="https://github.com/MalindaGamage/SentimentAnalysisProject" class="proj-link proj-link-github" target="_blank" rel="noopener"><i class="bx bxl-github"></i> GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-python filter-ai">
+            <div class="proj-card">
+              <div class="proj-header python-ml-bg">
+                <i class="bx bx-home-alt proj-icon"></i>
+                <span class="proj-type-badge">ML</span>
+              </div>
+              <div class="proj-body">
+                <h4>House Price Prediction ML</h4>
+                <p>Supervised learning project predicting house prices via Linear Regression on square footage data, with matplotlib scatter and regression visualizations.</p>
+                <div class="proj-tags">
+                  <span class="proj-tag">Python</span><span class="proj-tag">scikit-learn</span><span class="proj-tag">pandas</span><span class="proj-tag">matplotlib</span><span class="proj-tag">numpy</span>
+                </div>
+                <div class="proj-links">
+                  <a href="https://github.com/MalindaGamage/house_price_prediction_ml" class="proj-link proj-link-github" target="_blank" rel="noopener"><i class="bx bxl-github"></i> GitHub</a>
+                </div>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-python">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="ERP and automation project">
-              <div class="portfolio-info-card">
+            <div class="proj-card">
+              <div class="proj-header odoo-bg">
+                <i class="bx bx-package proj-icon"></i>
+                <span class="proj-type-badge">Professional</span>
+              </div>
+              <div class="proj-body">
                 <h4>Odoo ERP Custom Modules</h4>
-                <p>Python, Odoo, PostgreSQL, AWS S3</p>
-              </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Odoo ERP Custom Modules"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-cpp">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="Embedded data capture project">
-              <div class="portfolio-info-card">
-                <h4>Zebra Data Capture Engineering</h4>
-                <p>C++, Java, Embedded Scanning</p>
-              </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Zebra Data Capture Engineering"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                <p>Custom Odoo modules for tea pre-costing, gem purchasing and cutting, work-center cost calculation, and catalog uploads with AWS S3 integration at Tea Tang.</p>
+                <div class="proj-tags">
+                  <span class="proj-tag">Python</span><span class="proj-tag">Odoo</span><span class="proj-tag">PostgreSQL</span><span class="proj-tag">XML</span><span class="proj-tag">AWS S3</span>
+                </div>
+                <div class="proj-links">
+                  <span class="proj-link proj-link-work"><i class="bi bi-building"></i> Tea Tang</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-java">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="Identity and access management project">
-              <div class="portfolio-info-card">
-                <h4>API Platform and Identity Controls</h4>
-                <p>WSO2, OAuth2, Scopes, Secure APIs</p>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-ai filter-python">
+            <div class="proj-card">
+              <div class="proj-header ai-bg">
+                <i class="bx bx-trophy proj-icon"></i>
+                <span class="proj-type-badge">Hackathon</span>
               </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="API Platform and Identity Controls"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-python">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="Business process automation project">
-              <div class="portfolio-info-card">
-                <h4>Tea and Gem Workflow Automation</h4>
-                <p>Python, XML, JavaScript, ERP Ops</p>
-              </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Tea and Gem Workflow Automation"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              <div class="proj-body">
+                <h4>PlanAI – 401(k) AI Assistant</h4>
+                <p>AI contact-center assistant built at Persistent Semicolons 2025 hackathon targeting 95%+ customer satisfaction and 90% efficiency gains for retirement plan queries.</p>
+                <div class="proj-tags">
+                  <span class="proj-tag">Python</span><span class="proj-tag">LLM</span><span class="proj-tag">OpenAI API</span><span class="proj-tag">React</span>
+                </div>
+                <div class="proj-links">
+                  <span class="proj-link proj-link-work"><i class="bi bi-building"></i> Persistent Systems</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-cpp">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="Performance and protocol handling project">
-              <div class="portfolio-info-card">
-                <h4>Protocol and Systems Engineering</h4>
-                <p>C++, TCP, Testing, Optimization</p>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-csharp">
+            <div class="proj-card">
+              <div class="proj-header csharp-bg">
+                <i class="bx bx-car proj-icon"></i>
+                <span class="proj-type-badge">C# / .NET</span>
               </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Protocol and Systems Engineering"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-java filter-python">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="AI hackathon assistant project">
-              <div class="portfolio-info-card">
-                <h4>PlanAI Hackathon Solution</h4>
-                <p>LLM, OpenAI API, React, Python</p>
-              </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="PlanAI Hackathon Solution"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              <div class="proj-body">
+                <h4>Westminster Vehicle Rental System</h4>
+                <p>Interface-driven OOP vehicle rental system with full UML documentation, service layer business logic, and model-driven architecture from IIT coursework.</p>
+                <div class="proj-tags">
+                  <span class="proj-tag">C#</span><span class="proj-tag">.NET</span><span class="proj-tag">OOP</span><span class="proj-tag">UML</span>
+                </div>
+                <div class="proj-links">
+                  <a href="https://github.com/MalindaGamage/Westminster-VehicleRental-System" class="proj-link proj-link-github" target="_blank" rel="noopener"><i class="bx bxl-github"></i> GitHub</a>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-java">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="Backend integration project">
-              <div class="portfolio-info-card">
-                <h4>Event-Driven Integration Services</h4>
-                <p>Java, NATS, Microservices</p>
-              </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Event-Driven Integration Services"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
+        </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-python">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="Full-stack dashboard project">
-              <div class="portfolio-info-card">
-                <h4>Cloud-Native Backend Delivery</h4>
-                <p>AWS EC2, S3, Lambda, Docker</p>
-              </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Cloud-Native Backend Delivery"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
+        <div class="row mt-3">
+          <div class="col-12 text-center" data-aos="fade-up">
+            <a href="https://github.com/MalindaGamage" target="_blank" rel="noopener" class="portfolio-github-cta">
+              <i class="bx bxl-github"></i> View All 29 Repositories on GitHub
+            </a>
           </div>
-
         </div>
 
       </div>
