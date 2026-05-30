@@ -2348,18 +2348,9 @@ section {
 .t-opt  { color: #888; font-weight: 600; font-size: 11px; }
 
 /*--------------------------------------------------------------
-# Enhanced Skill Bar Animation
+# Skill Bar Styling
 --------------------------------------------------------------*/
-.skills .progress-bar {
-  width: 0 !important;
-  transition: width 1.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-}
-
-.skills .progress-bar.animated {
-  /* JS sets width via aria-valuenow */
-}
-
-/* Skill percentage counter glow */
+/* Percentage counter hover glow */
 .skills .progress .skill .val {
   transition: color 0.3s ease;
 }
@@ -2368,7 +2359,7 @@ section {
   color: #149ddd;
 }
 
-/* Skill category headings with icon */
+/* Category headings with left-accent bar */
 .skills .skills-content h4 {
   position: relative;
   padding-left: 14px;
@@ -2386,4 +2377,117 @@ section {
   height: 18px;
   background: #149ddd;
   border-radius: 2px;
+}
+
+/*--------------------------------------------------------------
+# Certifications v2 — Image Thumbnail Cards
+--------------------------------------------------------------*/
+.cert-card-v2 {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(17, 37, 68, 0.09);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  height: calc(100% - 0px);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.cert-card-v2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 36px rgba(17, 37, 68, 0.16);
+}
+
+.cert-img-link {
+  position: relative;
+  display: block;
+  height: 150px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.cert-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.35s ease;
+}
+
+.cert-thumb-sm {
+  height: 120px;
+}
+
+.cert-zoom-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 157, 221, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.cert-zoom-overlay i {
+  font-size: 22px;
+}
+
+.cert-img-link:hover .cert-thumb {
+  transform: scale(1.05);
+}
+
+.cert-img-link:hover .cert-zoom-overlay {
+  background: rgba(20, 157, 221, 0.72);
+  opacity: 1;
+}
+
+.cert-v2-body {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.cert-v2-body-sm {
+  padding: 12px 14px;
+  gap: 8px;
+}
+
+.cert-v2-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cert-v2-row .cert-card-icon {
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.cert-v2-info h4 {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #09090B;
+  margin-bottom: 2px;
+  line-height: 1.3;
+}
+
+.cert-v2-info p {
+  font-size: 11.5px;
+  color: #888;
+  margin: 0;
+}
+
+/* Testimonial profile photo improvements */
+.testimonials .testimonial-img {
+  object-fit: cover;
+  width: 90px;
+  height: 90px;
 }

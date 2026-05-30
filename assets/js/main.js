@@ -141,7 +141,22 @@
     });
   }
 
-  // Skills animation handled by the sidebar collapse section above
+  /**
+   * Skills animation
+   */
+  let skilsContent = select('.skills-content');
+  if (skilsContent) {
+    new Waypoint({
+      element: skilsContent,
+      offset: '80%',
+      handler: function(direction) {
+        let progress = select('.progress .progress-bar', true);
+        progress.forEach((el) => {
+          el.style.width = el.getAttribute('aria-valuenow') + '%'
+        });
+      }
+    })
+  }
 
   /**
    * Porfolio isotope and filter
@@ -178,6 +193,16 @@
    */
   const portfolioLightbox = GLightbox({
     selector: '.portfolio-lightbox'
+  });
+
+  /**
+   * Certificate photo lightbox
+   */
+  const certLightbox = GLightbox({
+    selector: '.glightbox-cert',
+    touchNavigation: true,
+    loop: true,
+    autoplayVideos: false
   });
 
   /**
@@ -266,31 +291,6 @@
       localStorage.setItem('sidebarCollapsed', collapsed);
     });
   }
-
-  /**
-   * Animated skill bars — reset to 0 then trigger on scroll
-   */
-  (() => {
-    const bars = select('.progress .progress-bar', true);
-    bars.forEach(bar => bar.style.width = '0');
-
-    let triggered = false;
-    const skillSection = select('.skills-content');
-    if (skillSection) {
-      new Waypoint({
-        element: skillSection,
-        offset: '85%',
-        handler: function() {
-          if (triggered) return;
-          triggered = true;
-          bars.forEach(bar => {
-            const target = bar.getAttribute('aria-valuenow') + '%';
-            setTimeout(() => { bar.style.width = target; }, 100);
-          });
-        }
-      });
-    }
-  })();
 
   /**
    * WhatsApp contact form
