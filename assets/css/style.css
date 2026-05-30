@@ -1796,3 +1796,242 @@ section {
     gap: 2px;
   }
 }
+
+/*--------------------------------------------------------------
+# Certifications – extra platform badge colors
+--------------------------------------------------------------*/
+.linkedin-cert  { background: linear-gradient(135deg, #0A66C2 0%, #0077B5 100%); }
+.udemy-cert     { background: linear-gradient(135deg, #a435f0 0%, #7719aa 100%); }
+.uni-cert       { background: linear-gradient(135deg, #2980b9 0%, #1a5276 100%); }
+.ops-cert       { background: linear-gradient(135deg, #27ae60 0%, #1a7a43 100%); }
+.hackathon-cert { background: linear-gradient(135deg, #e67e22 0%, #d35400 100%); }
+
+.cert-linkedin-badge { color: #0A66C2; }
+.cert-udemy-badge    { color: #a435f0; }
+.cert-uni-badge      { color: #2980b9; }
+.cert-hackathon-badge{ color: #e67e22; }
+
+.cert-linkedin { color: #0A66C2 !important; }
+.cert-other    { color: #173b6c !important; }
+
+.cert-linkedin i, .cert-other i {
+  color: inherit !important;
+}
+
+/*--------------------------------------------------------------
+# Volunteering & Leadership Section
+--------------------------------------------------------------*/
+.volunteering .vol-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(17, 37, 68, 0.09);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+  height: calc(100% - 30px);
+  display: flex;
+  flex-direction: column;
+}
+
+.volunteering .vol-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(17, 37, 68, 0.16);
+}
+
+.volunteering .vol-icon {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  flex-shrink: 0;
+}
+
+.volunteering .vol-icon i {
+  font-size: 40px;
+  color: rgba(255,255,255,0.92);
+}
+
+/* Vol icon gradients */
+.karate-bg   { background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%); }
+.captain-bg  { background: linear-gradient(135deg, #d35400 0%, #f39c12 100%); }
+.teaching-bg { background: linear-gradient(135deg, #134e5e 0%, #71b280 100%); }
+.iesl-bg     { background: linear-gradient(135deg, #1a5276 0%, #2980b9 100%); }
+.blog-bg     { background: linear-gradient(135deg, #18181B 0%, #3F3F46 100%); }
+.colors-bg   { background: linear-gradient(135deg, #6a0dad 0%, #9b59b6 100%); }
+
+.volunteering .vol-body {
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.volunteering .vol-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #f0f5fc;
+  color: #173b6c;
+  border: 1px solid #e4edf9;
+  margin-bottom: 10px;
+  letter-spacing: 0.03em;
+}
+
+.volunteering .vol-body h4 {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #09090B;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.volunteering .vol-org {
+  font-size: 13px;
+  color: #149ddd;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.volunteering .vol-org i {
+  margin-right: 4px;
+}
+
+.volunteering .vol-body p {
+  font-size: 13.5px;
+  color: #555;
+  line-height: 1.65;
+  flex: 1;
+  margin-bottom: 12px;
+}
+
+.volunteering .vol-achievement {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #d35400;
+  margin-top: auto;
+}
+
+.volunteering .vol-achievement i {
+  font-size: 14px;
+}
+
+.volunteering .vol-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #149ddd;
+  margin-top: auto;
+  transition: color 0.2s;
+}
+
+.volunteering .vol-link:hover {
+  color: #0a6fa1;
+}
+
+/*--------------------------------------------------------------
+# High-end animation enhancements
+--------------------------------------------------------------*/
+
+/* Staggered section title reveal */
+.section-title h2 {
+  animation: none;
+}
+
+[data-aos="fade-up"] {
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Smooth skill bar fill */
+.skills .progress-bar {
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Glowing pulse on count boxes */
+.facts .count-box {
+  transition: transform 0.3s ease;
+}
+
+.facts .count-box:hover {
+  transform: translateY(-4px);
+}
+
+/* Resume timeline dot pulse */
+.resume .resume-item::before {
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.resume .resume-item:hover::before {
+  background: #149ddd;
+  transform: scale(1.3);
+}
+
+/* Section heading underline grow */
+.section-title h2::after {
+  transition: width 0.6s ease;
+}
+
+/* Profile image hover glow */
+#header .profile img {
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+#header .profile img:hover {
+  box-shadow: 0 0 0 4px #149ddd, 0 0 20px rgba(20, 157, 221, 0.4);
+  transform: scale(1.03);
+}
+
+/* Social link enhanced hover */
+#header .profile .social-links a {
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#header .profile .social-links a:hover {
+  transform: translateY(-2px) scale(1.1);
+}
+
+/* Enhanced contact info hover */
+.contact .info .address:hover i,
+.contact .info .email:hover i,
+.contact .info .phone:hover i {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+/* Volunteering card achievement highlight */
+.volunteering .vol-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #149ddd;
+  transition: width 0.4s ease;
+  border-radius: 0 0 14px 14px;
+}
+
+.volunteering .vol-card {
+  position: relative;
+}
+
+.volunteering .vol-card:hover::after {
+  width: 100%;
+}
+
+/* Certification card number counter style */
+.cert-platform-label {
+  border-left: 4px solid #149ddd;
+  padding-left: 12px;
+}
+
+/* Smooth footer appearance */
+#footer {
+  transition: opacity 0.3s ease;
+}
