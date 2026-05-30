@@ -2035,3 +2035,355 @@ section {
 #footer {
   transition: opacity 0.3s ease;
 }
+
+/*--------------------------------------------------------------
+# Sidebar Collapse Toggle
+--------------------------------------------------------------*/
+.sidebar-toggle {
+  display: none;
+  position: absolute;
+  top: 16px;
+  right: -16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #e4edf9;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.14);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  color: #173b6c;
+  font-size: 14px;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.sidebar-toggle:hover {
+  background: #149ddd;
+  color: #fff;
+  border-color: #149ddd;
+  transform: scale(1.1);
+}
+
+@media (min-width: 1200px) {
+  .sidebar-toggle { display: flex; }
+
+  #header {
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+  }
+
+  #header.sidebar-collapsed {
+    width: 72px;
+  }
+
+  #header.sidebar-collapsed .profile h1,
+  #header.sidebar-collapsed .profile .social-links,
+  #header.sidebar-collapsed .nav-menu a span {
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+    display: none;
+  }
+
+  #header.sidebar-collapsed .profile {
+    padding: 8px 0;
+  }
+
+  #header.sidebar-collapsed .profile img {
+    width: 42px;
+    margin: 8px auto;
+  }
+
+  #header.sidebar-collapsed .nav-menu a {
+    justify-content: center;
+    padding: 14px 0;
+  }
+
+  #header.sidebar-collapsed .nav-menu a i {
+    font-size: 22px;
+    padding-right: 0;
+    margin: 0;
+  }
+
+  #header.sidebar-collapsed #footer {
+    display: none;
+  }
+
+  #header.sidebar-collapsed .sidebar-toggle {
+    right: -14px;
+  }
+
+  body.sidebar-collapsed #main {
+    margin-left: 72px;
+    transition: margin-left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  #main {
+    transition: margin-left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/*--------------------------------------------------------------
+# GitHub Stats Strip (replaces broken image)
+--------------------------------------------------------------*/
+.github-strip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 16px 20px;
+  background: #f8faff;
+  border-radius: 12px;
+  border: 1px solid #e4edf9;
+}
+
+.github-strip-stat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-direction: column;
+  text-align: center;
+  min-width: 60px;
+}
+
+.github-strip-stat i {
+  font-size: 20px;
+  color: #149ddd;
+}
+
+.gs-num {
+  font-size: 22px;
+  font-weight: 800;
+  color: #09090B;
+  line-height: 1;
+}
+
+.gs-lbl {
+  font-size: 11px;
+  color: #777;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.gs-cta {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 20px;
+  border-radius: 999px;
+  background: #18181B;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background 0.25s ease;
+  white-space: nowrap;
+}
+
+.gs-cta i {
+  font-size: 18px;
+}
+
+.gs-cta:hover {
+  background: #149ddd;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .github-strip { justify-content: center; }
+  .gs-cta { margin-left: 0; }
+}
+
+/*--------------------------------------------------------------
+# Resume Company Logos
+--------------------------------------------------------------*/
+.resume-co-logo {
+  margin-bottom: 8px;
+}
+
+.co-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.3px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.co-badge:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.22);
+}
+
+/* Company brand colors */
+.xventure-co    { background: linear-gradient(135deg, #1e3c72, #2a5298); }
+.persistent-co  { background: linear-gradient(135deg, #f7971e, #d35400); }
+.teatang-co     { background: linear-gradient(135deg, #27ae60, #1a7a43); }
+.axiata-co      { background: linear-gradient(135deg, #c0392b, #922b21); }
+.haycarb-co     { background: linear-gradient(135deg, #795548, #5d4037); }
+.ansell-co      { background: linear-gradient(135deg, #9c27b0, #7b1fa2); }
+.academy-co     { background: linear-gradient(135deg, #149ddd, #0a6fa1); }
+/* University colors */
+.westminster-co { background: linear-gradient(135deg, #c0392b, #7b241c); }
+.peradeniya-co  { background: linear-gradient(135deg, #27ae60, #1e8449); }
+.walasmulla-co  { background: linear-gradient(135deg, #2980b9, #1a5276); }
+
+/*--------------------------------------------------------------
+# Education Transcript Accordion
+--------------------------------------------------------------*/
+.edu-transcript {
+  margin-top: 14px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e4edf9;
+}
+
+.edu-transcript summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  background: #f0f5fc;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #173b6c;
+  user-select: none;
+  transition: background 0.2s;
+  list-style: none;
+}
+
+.edu-transcript summary::-webkit-details-marker { display: none; }
+
+.edu-transcript summary::after {
+  content: '\F282';
+  font-family: 'bootstrap-icons';
+  margin-left: auto;
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.edu-transcript[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.edu-transcript summary:hover {
+  background: #e4edf9;
+}
+
+.edu-transcript summary i {
+  color: #149ddd;
+  font-size: 16px;
+}
+
+.transcript-wrap {
+  padding: 16px;
+  background: #fff;
+  overflow-x: auto;
+}
+
+.transcript-note {
+  font-size: 12.5px;
+  color: #555;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+.transcript-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.transcript-table th {
+  background: #f0f5fc;
+  color: #173b6c;
+  font-weight: 700;
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 2px solid #e4edf9;
+}
+
+.transcript-table td {
+  padding: 6px 10px;
+  border-bottom: 1px solid #f0f5fc;
+  color: #444;
+}
+
+.transcript-table tr:last-child td {
+  border-bottom: none;
+}
+
+.transcript-table tr:hover td {
+  background: #f8faff;
+}
+
+/* Section separator rows */
+.t-section td {
+  background: #eef3fb !important;
+  color: #173b6c !important;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 8px 10px 4px !important;
+}
+
+/* Grade colors */
+.g-a  { color: #1a7a43; font-weight: 700; }
+.g-b  { color: #1e3c72; font-weight: 700; }
+.g-c  { color: #b34f00; font-weight: 700; }
+
+/* MSc type badges */
+.t-core { color: #149ddd; font-weight: 700; font-size: 11px; }
+.t-opt  { color: #888; font-weight: 600; font-size: 11px; }
+
+/*--------------------------------------------------------------
+# Enhanced Skill Bar Animation
+--------------------------------------------------------------*/
+.skills .progress-bar {
+  width: 0 !important;
+  transition: width 1.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.skills .progress-bar.animated {
+  /* JS sets width via aria-valuenow */
+}
+
+/* Skill percentage counter glow */
+.skills .progress .skill .val {
+  transition: color 0.3s ease;
+}
+
+.skills .progress:hover .skill .val {
+  color: #149ddd;
+}
+
+/* Skill category headings with icon */
+.skills .skills-content h4 {
+  position: relative;
+  padding-left: 14px;
+  color: #173b6c;
+  margin: 20px 0 10px;
+}
+
+.skills .skills-content h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 18px;
+  background: #149ddd;
+  border-radius: 2px;
+}

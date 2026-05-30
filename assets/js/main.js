@@ -141,22 +141,7 @@
     });
   }
 
-  /**
-   * Skills animation
-   */
-  let skilsContent = select('.skills-content');
-  if (skilsContent) {
-    new Waypoint({
-      element: skilsContent,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = select('.progress .progress-bar', true);
-        progress.forEach((el) => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%'
-        });
-      }
-    })
-  }
+  // Skills animation handled by the sidebar collapse section above
 
   /**
    * Porfolio isotope and filter
@@ -257,6 +242,55 @@
    * Initiate Pure Counter 
    */
   new PureCounter();
+
+  /**
+   * Sidebar collapse toggle
+   */
+  const sidebarToggleBtn = select('#sidebarToggle');
+  if (sidebarToggleBtn) {
+    const header = select('#header');
+    const icon = select('#toggleIcon');
+
+    // Restore saved state
+    if (localStorage.getItem('sidebarCollapsed') === 'true') {
+      header.classList.add('sidebar-collapsed');
+      document.body.classList.add('sidebar-collapsed');
+      if (icon) icon.className = 'bi bi-chevron-double-right';
+    }
+
+    sidebarToggleBtn.addEventListener('click', function() {
+      header.classList.toggle('sidebar-collapsed');
+      document.body.classList.toggle('sidebar-collapsed');
+      const collapsed = header.classList.contains('sidebar-collapsed');
+      if (icon) icon.className = collapsed ? 'bi bi-chevron-double-right' : 'bi bi-chevron-double-left';
+      localStorage.setItem('sidebarCollapsed', collapsed);
+    });
+  }
+
+  /**
+   * Animated skill bars — reset to 0 then trigger on scroll
+   */
+  (() => {
+    const bars = select('.progress .progress-bar', true);
+    bars.forEach(bar => bar.style.width = '0');
+
+    let triggered = false;
+    const skillSection = select('.skills-content');
+    if (skillSection) {
+      new Waypoint({
+        element: skillSection,
+        offset: '85%',
+        handler: function() {
+          if (triggered) return;
+          triggered = true;
+          bars.forEach(bar => {
+            const target = bar.getAttribute('aria-valuenow') + '%';
+            setTimeout(() => { bar.style.width = target; }, 100);
+          });
+        }
+      });
+    }
+  })();
 
   /**
    * WhatsApp contact form

@@ -42,10 +42,13 @@
 
   <!-- ======= Header ======= -->
   <header id="header">
+    <button class="sidebar-toggle" id="sidebarToggle" title="Collapse sidebar" aria-label="Toggle sidebar">
+      <i class="bi bi-chevron-double-left" id="toggleIcon"></i>
+    </button>
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+        <img src="assets/img/profile-img.jpg" alt="Malinda Gamage" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Malinda Gamage</a></h1>
         <div class="social-links mt-3 text-center">
           <a href="https://web.facebook.com/profile.php?id=100026485823412" class="facebook" title="FaceBook"><i class="bx bxl-facebook"></i></a>
@@ -165,9 +168,24 @@
                 <p>Java Instructor · Technical Blogger (Medium) · 3rd Dan Black Belt · Karate Team Captain (Peradeniya 2021)</p>
               </div>
             </div>
-            <div class="github-stats-wrap mt-4">
-              <a href="https://github.com/malindagamage" target="_blank" rel="noopener">
-                <img src="https://github-readme-stats.vercel.app/api?username=malindagamage&show_icons=true&theme=default&hide_border=true&count_private=true" alt="Malinda's GitHub Stats" class="github-stats-img" loading="lazy">
+            <div class="github-strip mt-4">
+              <div class="github-strip-stat">
+                <i class="bx bxl-github"></i>
+                <span class="gs-num">29</span>
+                <span class="gs-lbl">Repositories</span>
+              </div>
+              <div class="github-strip-stat">
+                <i class="bi bi-star-fill"></i>
+                <span class="gs-num">8+</span>
+                <span class="gs-lbl">Stars</span>
+              </div>
+              <div class="github-strip-stat">
+                <i class="bi bi-git"></i>
+                <span class="gs-num">200+</span>
+                <span class="gs-lbl">Commits</span>
+              </div>
+              <a href="https://github.com/MalindaGamage" target="_blank" rel="noopener" class="gs-cta">
+                <i class="bx bxl-github"></i> View GitHub
               </a>
             </div>
           </div>
@@ -452,16 +470,83 @@
 
             <h3 class="resume-title">Education</h3>
             <div class="resume-item">
+              <div class="resume-co-logo"><span class="co-badge westminster-co">UW</span></div>
               <h4>M.Sc in Information Technology</h4>
               <h5>Jan 2024 – Jan 2026</h5>
               <p><em>University of Westminster (IIT Campus), Colombo</em></p>
-              <p>Currently reading. Key modules: Object Oriented Programming, Data Structures &amp; Algorithms, Advanced Software Design, Cyber Security Threats &amp; Countermeasures, Big Data Theory &amp; Practice, Software Development Environments, Software Development Project.</p>
+              <p>Currently reading. 8 modules · 180 credits total.</p>
+              <details class="edu-transcript">
+                <summary><i class="bx bx-list-ul"></i> View MSc Modules</summary>
+                <div class="transcript-wrap">
+                  <table class="transcript-table">
+                    <thead><tr><th>Code</th><th>Module</th><th>Credits</th><th>Type</th></tr></thead>
+                    <tbody>
+                      <tr><td>7SENG011C</td><td>Object Oriented Programming</td><td>20</td><td class="t-core">Core</td></tr>
+                      <tr><td>7SENG010C</td><td>Data Structures and Algorithms</td><td>20</td><td class="t-opt">Optional</td></tr>
+                      <tr><td>7SENG004C</td><td>Advanced Software Design</td><td>20</td><td class="t-core">Core</td></tr>
+                      <tr><td>7CSEF002C</td><td>Cyber Security Threats &amp; Countermeasures</td><td>20</td><td class="t-opt">Optional</td></tr>
+                      <tr><td>7BDIN006C</td><td>Big Data Theory and Practice</td><td>20</td><td class="t-opt">Optional</td></tr>
+                      <tr><td>7BUIS030C</td><td>Data System Concepts and Fundamentals</td><td>20</td><td class="t-core">Core</td></tr>
+                      <tr><td>7SENG012C</td><td>Software Development Environments</td><td>20</td><td class="t-core">Core</td></tr>
+                      <tr><td>7SENG013C</td><td>Software Development Project</td><td>40</td><td class="t-core">Core</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </details>
             </div>
             <div class="resume-item">
+              <div class="resume-co-logo"><span class="co-badge peradeniya-co">UP</span></div>
               <h4>B.Sc in Engineering Science (Hons.)</h4>
               <h5>Nov 2017 – Mar 2023</h5>
               <p><em>University of Peradeniya, Sri Lanka</em></p>
-              <p>Manufacturing &amp; Industrial Engineering · GPA 3.0/4.0 (Second Class Lower Division). Activities: IESL Student Chapter · Karate Team Captain 2021 · University Colors Award for Excellence in Karate · Art Circle.</p>
+              <p>Manufacturing &amp; Industrial Engineering · GPA 3.0/4.0 (Second Class Lower Division). Activities: IESL Student Chapter · Karate Team Captain 2021 · University Colors Award · Art Circle.</p>
+              <details class="edu-transcript">
+                <summary><i class="bx bx-list-ul"></i> View Academic Transcript</summary>
+                <div class="transcript-wrap">
+                  <p class="transcript-note">Specialization: Manufacturing &amp; Industrial Engineering · Final GPA: 3.0/4.0 · Result: Second Class Honours (Lower Division)</p>
+                  <table class="transcript-table">
+                    <thead><tr><th>Subject</th><th>Grade</th></tr></thead>
+                    <tbody>
+                      <tr class="t-section"><td colspan="2">Specialization Core Courses</td></tr>
+                      <tr><td>Ordinary Differential Equations</td><td class="g-a">A</td></tr>
+                      <tr><td>Machining Technology</td><td class="g-a">A+</td></tr>
+                      <tr><td>Calculus</td><td class="g-a">A+</td></tr>
+                      <tr><td>Industrial Statistics</td><td class="g-a">A</td></tr>
+                      <tr><td>Operational Research I</td><td class="g-b">A-</td></tr>
+                      <tr><td>Sustainable Manufacturing</td><td class="g-b">A-</td></tr>
+                      <tr><td>Performance Evaluation of Manufacturing Systems</td><td class="g-b">A-</td></tr>
+                      <tr><td>Management Principles &amp; Economics</td><td class="g-b">A-</td></tr>
+                      <tr><td>Machine Design II</td><td class="g-b">B+</td></tr>
+                      <tr><td>Manufacturing Engineering Project I</td><td class="g-b">B+</td></tr>
+                      <tr><td>Financial &amp; Management Accounting for Engineers</td><td class="g-b">B+</td></tr>
+                      <tr><td>Machine Design I</td><td class="g-b">B</td></tr>
+                      <tr><td>Manufacturing Planning &amp; Control</td><td class="g-b">B</td></tr>
+                      <tr><td>Quality &amp; Reliability Engineering</td><td class="g-b">B</td></tr>
+                      <tr><td>CAD/CAM</td><td class="g-b">B</td></tr>
+                      <tr><td>Manufacturing Engineering Project II</td><td class="g-b">B</td></tr>
+                      <tr><td>Manufacturing Systems</td><td class="g-b">B</td></tr>
+                      <tr><td>Probability &amp; Statistics</td><td class="g-c">C+</td></tr>
+                      <tr><td>Materials Science I</td><td class="g-c">C+</td></tr>
+                      <tr><td>Mechanics of Materials I</td><td class="g-c">C+</td></tr>
+                      <tr><td>Mechanics of Machines</td><td class="g-c">C</td></tr>
+                      <tr><td>Computer Aided Drafting &amp; Solid Modelling</td><td class="g-c">C</td></tr>
+                      <tr><td>Manufacturing Automation</td><td class="g-c">C</td></tr>
+                      <tr><td>Mechanics of Materials II</td><td class="g-c">C</td></tr>
+                      <tr><td>Manufacturing Processes</td><td class="g-b">B-</td></tr>
+                      <tr><td>Product Design &amp; Development</td><td class="g-b">B-</td></tr>
+                      <tr><td>Plant Layout &amp; Plant Management</td><td class="g-b">B-</td></tr>
+                      <tr><td>Industrial Engineering &amp; Decision Sciences</td><td class="g-b">B-</td></tr>
+                      <tr class="t-section"><td colspan="2">General Elective Courses</td></tr>
+                      <tr><td>The Engineer in Society</td><td class="g-a">A</td></tr>
+                      <tr><td>Painting &amp; Sculpture</td><td class="g-a">A</td></tr>
+                      <tr><td>Introduction to Digital Art</td><td class="g-b">B+</td></tr>
+                      <tr><td>Business Law</td><td class="g-b">B</td></tr>
+                      <tr><td>Economics for Engineers</td><td class="g-b">B</td></tr>
+                      <tr><td>Engineer as an Entrepreneur</td><td class="g-b">B-</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </details>
             </div>
             <div class="resume-item">
               <h4>Advanced Level — Mathematics</h4>
@@ -473,6 +558,7 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3 class="resume-title">Professional Experience</h3>
             <div class="resume-item">
+              <div class="resume-co-logo"><span class="co-badge academy-co">MPA</span></div>
               <h4>Java Instructor</h4>
               <h5>Jan 2025 – Present</h5>
               <p><em>Malinda Programming Academy · Part-time · Remote, Sri Lanka</em></p>
@@ -483,6 +569,7 @@
               </ul>
             </div>
             <div class="resume-item">
+              <div class="resume-co-logo"><span class="co-badge xventure-co">XV</span></div>
               <h4>Back End Developer / Software Engineer</h4>
               <h5>Sep 2025 – Present</h5>
               <p><em>X-Venture, Pannipitiya</em></p>
@@ -494,6 +581,7 @@
             </div>
 
             <div class="resume-item">
+              <div class="resume-co-logo"><span class="co-badge persistent-co">PS</span></div>
               <h4>Senior Software Engineer</h4>
               <h5>Oct 2024 - Aug 2025</h5>
               <p><em>Persistent Systems, Colombo, Sri Lanka</em></p>
@@ -505,6 +593,7 @@
             </div>
             
             <div class="resume-item">
+              <div class="resume-co-logo"><span class="co-badge teatang-co">TT</span></div>
               <h4>Associate Software Engineer</h4>
               <h5>Aug 2024 - Oct 2024</h5>
               <p><em>Tea Tang (Pvt) Ltd, Orugodawatta</em></p>
@@ -516,6 +605,7 @@
             </div>
             
             <div class="resume-item">
+              <div class="resume-co-logo"><span class="co-badge axiata-co">ADL</span></div>
               <h4>Software Engineer Intern</h4>
               <h5>Jul 2023 - Jun 2024</h5>
               <p><em>Axiata Digital Labs, Colombo, Sri Lanka</em></p>
@@ -527,6 +617,7 @@
               </ul>
             </div>
             <div class="resume-item">
+              <div class="resume-co-logo"><span class="co-badge haycarb-co">HC</span></div>
               <h4>Industrial Manufacturing Engineer Intern</h4>
               <h5>Jul 2022 – Oct 2022</h5>
               <p><em>HAYCARB PLC, Madampe, Sri Lanka</em></p>
@@ -536,6 +627,7 @@
               </ul>
             </div>
             <div class="resume-item">
+              <div class="resume-co-logo"><span class="co-badge ansell-co">AN</span></div>
               <h4>Industrial Manufacturing Engineer Intern</h4>
               <h5>Nov 2019 – Jan 2020</h5>
               <p><em>Ansell Lanka (Pvt) Ltd, Biyagama, Sri Lanka</em></p>
@@ -1281,7 +1373,7 @@
                   I had the pleasure of working alongside Malinda Gamage, and I can confidently say that he is one of the most skilled and dependable Java developers I've worked with. His deep understanding of Java, attention to detail, and problem-solving mindset make him a valuable asset to any team. No matter how complex the issue or how tight the deadline, he's always ready to lend a hand, share knowledge, and support others.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="Ramith Sathsara">
+                <img src="https://ui-avatars.com/api/?name=Ramith+Sathsara&background=1e3c72&color=fff&size=200&bold=true&font-size=0.38" class="testimonial-img" alt="Ramith Sathsara">
                 <h3>Ramith Sathsara</h3>
                 <h4>Senior Software Engineer, Persistent Systems · July 2025</h4>
               </div>
@@ -1294,7 +1386,7 @@
                   I had the pleasure of working with Malinda for nearly a year in the ADL team. He's one of the most reliable and technically strong engineers I've worked with. His deep understanding of C++, Java, and Python, combined with hands-on experience in Docker and Kubernetes, made him a go-to person for solving complex problems. Malinda approaches challenges with a calm and analytical mindset — consistently delivering clean, efficient, and scalable solutions.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="Yasas Tharinda">
+                <img src="https://ui-avatars.com/api/?name=Yasas+Tharinda&background=134e5e&color=fff&size=200&bold=true&font-size=0.38" class="testimonial-img" alt="Yasas Tharinda">
                 <h3>Yasas Tharinda</h3>
                 <h4>Senior Software Engineer, Axiata Digital Labs · April 2025</h4>
               </div>
@@ -1320,7 +1412,7 @@
                   I had the privilege of working closely with Malinda Gamage during my internship at Tea Tang, where he served as Senior Developer. From the very beginning, Malinda stood out not just as a technically skilled developer, but also as a generous mentor. His ability to break down complex Odoo concepts into understandable tasks made learning both effective and enjoyable. He always encouraged curiosity and pushed for clean, scalable code.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="Kanesha Thalagahapitiya">
+                <img src="https://ui-avatars.com/api/?name=Kanesha+Thalagahapitiya&background=6a0dad&color=fff&size=200&bold=true&font-size=0.38" class="testimonial-img" alt="Kanesha Thalagahapitiya">
                 <h3>Kanesha Thalagahapitiya</h3>
                 <h4>Associate Software Engineer &amp; Odoo Developer · April 2025</h4>
               </div>
@@ -1333,7 +1425,7 @@
                   I had the pleasure of working alongside Malinda during our MSc in IT, and I can confidently say that he is an exceptional individual both academically and professionally. Malinda consistently demonstrated a deep understanding of complex IT concepts, coupled with a remarkable ability to apply them practically. His collaborative spirit and willingness to support peers made group projects not only successful but enjoyable.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="Manandi Kathriarachchi">
+                <img src="https://ui-avatars.com/api/?name=Manandi+Kathriarachchi&background=9b59b6&color=fff&size=200&bold=true&font-size=0.38" class="testimonial-img" alt="Manandi Kathriarachchi">
                 <h3>Manandi Kathriarachchi</h3>
                 <h4>MSc IT, University of Westminster · April 2025</h4>
               </div>
